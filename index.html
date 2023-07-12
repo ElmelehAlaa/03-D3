@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css" />
+    <style>
+      .completo {
+        text-decoration: line-through;
+      }
+    </style>
   </head>
   <body>
     <form onsubmit="addTasks(event)">
-      <input type="text" id="newTask" placeholder="Insert new task" />
+      <input type="text" id="task" placeholder="Insert new task" />
       <button>add task</button>
     </form>
-    <ul id="tasks"></ul>
+    <ul></ul>
 
     <script src="/index.js"></script>
   </body>

@@ -1,14 +1,15 @@
 const addTasks = (SubmitTask) => {
   SubmitTask.preventDefault();
-  const form = SubmitTask.target;
-  const input = document.getElementById("newTask");
-  // const singleTask = SubmitTask.target.elements[0] andava bene.
+  const input = document.getElementById("task");
+
   const ul = document.querySelector("ul");
-  ul.innerHTML += `<li onclick='completa(event)'>${input.value}</li>`;
-  const completa = (clickEvent) => {
-    clickEvent.target.classList.toggle("completa");
-  };
-  const elimina = (clickEvent) => {
-    clickEvent.target.parentElement.style.display = "none";
-  };
+  ul.innerHTML += `<li>  <span onclick='completa(event)'>${input.value}</span><button onclick='elimina(event)'> ELIMINA </button> </li>`;
+};
+const completa = (clickEvent) => {
+  clickEvent.target.classList.toggle("completo");
+};
+
+const elimina = (clickEvent) => {
+  console.log(clickEvent);
+  clickEvent.target.parentElement.style.display = "none";
 };
